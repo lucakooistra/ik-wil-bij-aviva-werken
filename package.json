@@ -10,7 +10,8 @@
     "build-dev": "webpack",
     "start-open": "webpack serve --open",
     "start": "webpack serve",
-    "watch": " webpack --watch"
+    "watch": " webpack --watch",
+    "clean": "rm -rf dist"
   },
   "keywords": [],
   "author": "",
