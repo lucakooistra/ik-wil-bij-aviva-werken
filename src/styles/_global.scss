@@ -1,15 +1,36 @@
 @use "variables";
 
 body {
-    magin: 0;
-    background-color: variables.$bg;
+    margin: 0;
+    background-color: variables.$background;
     color: var(--text);
 }
+
+.background-body {
+    position: relative;
+    background-image: url("../images/Background.svg");
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: 100%;
+    z-index: 0;
+
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        border-right: 99vw solid transparent;
+        border-bottom: 7vw solid variables.$background;
+        z-index: -1;
+    }
+}
+
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 }
 
 button {
