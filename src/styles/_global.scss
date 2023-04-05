@@ -1,18 +1,21 @@
 @use "variables";
+@use "mixins";
 
 body {
     margin: 0;
     background-color: variables.$background;
     color: var(--text);
+    font-family: 'Inter', sans-serif;
 }
 
-.background-body {
+.home-background-body {
     position: relative;
     background-image: url("../images/Background.svg");
     background-size: cover;
     background-position: center;
     height: auto;
     width: 100%;
+    min-width: 100%;
     z-index: 0;
 
     &::before{
@@ -25,18 +28,71 @@ body {
     }
 }
 
-
-main {
+.home-navbar{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    z-index: 1;
-}
+    height: 70px;
+    background: none;
 
-button {
-    font-size: 1.5rem;
-}
+    @include mixins.lg{
+        display: block;
+    }
 
-ul {
-    list-style-image: url("../images/sword-32x32.png");
+    &__img{
+        width: 90px;
+        height: 50px;
+        margin-left: 112px;
+    }
+
+    &__menu{
+        @extend .home-navbar;
+        gap: 27px;
+        margin-right: 112px;
+
+        @include mixins.lg{
+            display: block;
+        }
+
+    }
+
+    &__ul{
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+        gap: 27px;
+
+        @include mixins.lg{
+            display: block;
+        }
+    }
+
+    &__li{
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__button{
+        min-height: 41px;
+        min-width: 128px;
+        background-color: #F39C12;
+        border: none;
+        color: #ffffff;
+
+        @include mixins.lg{
+            position: fixed;
+            top: 20px;
+            right: 112px;
+        }
+    }
+
+    &__href{
+        text-decoration: none;
+        color: black;
+    }
+
+    #icon {
+
+    }
+
 }
