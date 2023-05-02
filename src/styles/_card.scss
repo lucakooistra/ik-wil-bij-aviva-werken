@@ -1,0 +1,55 @@
+@use "variables";
+@use "mixins";
+
+.Card{
+    position: relative;
+    margin-top: -200px;
+    display: flex;
+    justify-content: center;
+    gap: 46px;
+    padding-bottom: 200px;
+
+    &__body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 5px;
+        width: 208px;
+        height: 186px;
+        box-shadow: 4px 4px 4px #00000040;
+        border-radius: 4px;
+        background-color: variables.$background;
+    }
+
+    &--grey{
+        background-color: variables.$grey-background;
+    }
+
+    &__image{
+        margin: 0;
+    }
+
+    &__title{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        padding: 0 16px;
+        margin: 0;
+    }
+
+    &__text{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        padding: 0 16px;
+        margin: 0;
+    }
+
+    &__link{
+        color: #F39C12;
+        padding: 0 16px 16px 16px;
+    }
+}
+
+
+

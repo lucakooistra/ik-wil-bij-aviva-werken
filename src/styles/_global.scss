@@ -1,6 +1,9 @@
 @use "variables";
 @use "mixins";
 
+*{
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     background-color: variables.$background;
@@ -18,7 +21,7 @@ body {
     min-width: 100%;
     z-index: 0;
 
-    &::before{
+    &::after{
         content: "";
         position: absolute;
         bottom: 0;
@@ -28,7 +31,7 @@ body {
     }
 }
 
-.home-navbar{
+.navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,57 +43,57 @@ body {
         display: block;
     }
 
-    &__img{
-        width: 90px;
-        height: 50px;
-        margin-left: 112px;
-    }
-
-    &__menu{
-        @extend .home-navbar;
-        gap: 27px;
-        margin-right: 112px;
-
-        @include mixins.lg{
-            display: block;
+        &__img{
+            width: 90px;
+            height: 50px;
+            margin-left: 112px;
         }
 
-    }
+        &__menu{
+            @extend .navbar;
+            gap: 27px;
+            margin-right: 112px;
 
-    &__ul{
-        display: flex;
-        list-style-type: none;
-        justify-content: space-between;
-        gap: 27px;
+            @include mixins.lg{
+                display: block;
+            }
 
-        @include mixins.lg{
-            display: block;
         }
-    }
 
-    &__li{
-        font-size: 14px;
-        font-weight: 400;
-    }
+        &__ul{
+            display: flex;
+            list-style-type: none;
+            justify-content: space-between;
+            gap: 27px;
 
-    &__button{
-        min-height: 41px;
-        min-width: 128px;
-        background-color: #F39C12;
-        border: none;
-        color: #ffffff;
-
-        @include mixins.lg{
-            position: fixed;
-            top: 20px;
-            right: 112px;
+            @include mixins.lg{
+                display: block;
+            }
         }
-    }
 
-    &__href{
-        text-decoration: none;
-        color: black;
-    }
+        &__li{
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        &__button{
+            min-height: 41px;
+            min-width: 128px;
+            background-color: #F39C12;
+            border: none;
+            color: #ffffff;
+
+            @include mixins.lg{
+                position: fixed;
+                top: 20px;
+                right: 112px;
+            }
+        }
+
+        &__href{
+            text-decoration: none;
+            color: black;
+        }
 
 }
 
@@ -108,3 +111,4 @@ body {
         font-weight: 700;
     } 
 }
+
