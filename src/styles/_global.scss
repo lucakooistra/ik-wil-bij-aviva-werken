@@ -13,7 +13,7 @@ body {
     background-image: url("../images/Background.svg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     min-width: 100%;
     z-index: 0;
@@ -34,6 +34,7 @@ body {
     align-items: center;
     height: 70px;
     background: none;
+    padding-top: 19px;
 
     @include mixins.lg{
         display: block;
@@ -95,7 +96,15 @@ body {
 
 .home-h1{
     position: absolute;
-    top: 300px;
-    left: 50px;
-    
+    top: 200px;
+    left: 112px;
+    background-color: #FFFFFFBF;
+    padding: 45px 55px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+
+    & span {
+        font-weight: 700;
+    } 
 }
