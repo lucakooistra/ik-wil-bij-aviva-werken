@@ -1,7 +1,5 @@
 import "../styles/index.scss";
 import Recipes from "./Recipes";
-import sword from "../images/swc-sword.png";
-import swordSvg from "../images/sword.svg";
 import Navbar from "./Navbar";
 
 
@@ -10,7 +8,8 @@ const App = () => {
         <div className="home-background-body">
             <div className="home-hero">
                 <Navbar />
-                <h1 className="home-h1">Lorem ipsum dolor sit dolor sit amet sit amet consectetur.</h1>
+                <h1 className="home-h1"><span>Lorem ipsum</span> dolor sit dolor sit
+                <br />  amet sit amet consectetur.</h1>
             </div>
         </div>
     )
